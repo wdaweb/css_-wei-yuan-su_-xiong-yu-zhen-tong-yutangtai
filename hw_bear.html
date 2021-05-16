@@ -30,35 +30,212 @@
         height: 300px;
         border-radius: 50%;
         background: black;
-        z-index: -1;
     }
     #ears{
-        width: 100%;
+        width: 77%;
         height: 20%;
-        background: pink;
+        margin: auto;
+
+        position: relative;
+        top: -4%;
+    }
+    .left-ear{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: black;
+
+        float: left;
+        position: relative;
+    }
+    .left-ear::before{
+        content: '';
+        width: 31px;
+        height: 31px;
+        background: white;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .right-ear{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: black;
+
+        float: right;
+        position: relative;
+    }
+    .right-ear::before{
+        content: '';
+        width: 31px;
+        height: 31px;
+        background: white;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #eyes{
+        width: 60%;
+        height: 25%;
+        margin: auto;
 
         position: relative;
     }
-    #eyes{
-        width: 100%;
-        height: 25%;
+    .left-eye{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: white;
+
+        float: left;
+        position: relative;
+    }
+    .left-eye::before{
+        content: '';
+        width: 42px;
+        height: 42px;
+        background: black;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .right-eye{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: white;
+
+        float: right;
+        position: relative;
+    }
+    .right-eye::before{
+        content: '';
+        width: 42px;
+        height: 42px;
+        background: black;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     #mouth{
         width: 100%;
-        height: 30%
+        height: 30%;
+        margin: auto;
+
+        position: relative;
+    }
+    #mouth::before{
+        content: '';
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: red;
+
+        float: left;
+        position: absolute;
+        left: -7%;
+        top: -20%;
+    }
+    #mouth::after{
+        content: '';
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: red;
+
+        float: right;
+        position: absolute;
+        right: -7%;
+        top: -20%;
+    }
+    .mouth-mouth{
+        width: 123px;
+        height: 92px;
+        border-radius: 50%;
+        background: white;
+
+        position: absolute;
+        top: -25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .mouth-mouth::before{
+        content: '';
+        width: 40px;
+        height: 25px;
+        border-radius: 50%;
+        background: black;
+
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translate(-50%);
+    }
+    .mouth-mouth::after{
+        content: '';
+        width: 70px;
+        height: 30px;
+        border-radius: 50%;
+        background: black;
+
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translate(-50%);
     }
     #chest{
-        width: 100%;
+        width: 37%;
         height: 25%;
+        margin: auto;
+        
+        position: relative;
     }
+    #chest::before{
+        content: '';
+        width: 50px;
+        height: 55px;
+        background: white;
+
+        float: left;
+        transform: skew(40deg);
+    }
+    #chest::after{
+        content: '';
+        width: 50px;
+        height: 55px;
+        background: white;
+
+        float: right;
+        transform: skew(-40deg);    }
     </style>
 </head>
 <body>
     <div id="container">
-        <div class="ears"></div>
-        <div class="eyes"></div>
-        <div class="mouth"></div>
-        <div class="chest"></div>
+        <div id="ears">
+            <div class="left-ear"></div>
+            <div class="right-ear"></div>
+        </div>
+        <div id="eyes">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+        </div>
+        <div id="mouth">
+            <div class="mouth-mouth"></div>
+        </div>
+        <div id="chest"></div>
     </div>
 </body>
 </html>
